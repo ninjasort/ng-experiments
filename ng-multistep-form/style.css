@@ -1,0 +1,209 @@
+body {
+    padding-top: 20px;
+    background: #151515;
+    font-family: 'Georgia', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+#form-container {
+    background: #2f2f2f;
+    margin-bottom: 20px;
+}
+
+#form-container .page-header {
+    background: #151515;
+    margin: 0;
+    padding: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 0;
+}
+
+#status-buttons {
+    padding: 15px 0;
+}
+
+#status-buttons a {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#status-buttons a:hover {
+    text-decoration: none;
+}
+
+#status-buttons span {
+    background: #080808;
+    display: block;
+    height: 30px;
+    margin: 0 auto 10px;
+    padding-top: 5px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+#status-buttons a.active span {
+    background: #00BC8C;
+}
+
+#form-views {
+    max-width: 50%;
+    margin: auto;
+    color: white;
+    width: auto;
+    height: 35%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#signup-form {
+    display: flex;
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+    padding: 30px;
+}
+/* Basic styling for entering and leaving */
+/* left and right added to ensure full width */
+#form-views.ng-enter,
+#form-views.ng-leave {
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+}
+#form-views.ng-enter {
+    -webkit-animation: slideInRight 0.5s both ease;
+    -o-animation: slideInRight 0.5s both ease;
+    animation: slideInRight 0.5s both ease;
+}
+#form-views.ng-leave {
+    -webkit-animation: slideOutLeft 0.5s both ease;
+    -o-animation: slideOutLeft 0.5s both ease;
+    animation: slideOutLeft 0.5s both ease;
+}
+
+@-webkit-keyframes slideOutLeft {
+    to {
+	-webkit-transform: translateX(-200%);
+	-moz-transform: translateX(-200%);
+	-ms-transform: translateX(-200%);
+	-o-transform: translateX(-200%);
+	transform: translateX(-200%);
+
+    }
+}
+@-o-keyframes slideOutLeft {
+    to {
+	-webkit-transform: translateX(-200%);
+	-moz-transform: translateX(-200%);
+	-ms-transform: translateX(-200%);
+	-o-transform: translateX(-200%);
+	transform: translateX(-200%);
+
+    }
+}
+@-moz-keyframes slideOutLeft {
+    to {
+	-webkit-transform: translateX(-200%);
+	-moz-transform: translateX(-200%);
+	-ms-transform: translateX(-200%);
+	-o-transform: translateX(-200%);
+	transform: translateX(-200%);
+
+    }
+}
+@keyframes slideOutLeft {
+    to {
+	-webkit-transform: translateX(-200%);
+	-moz-transform: translateX(-200%);
+	-ms-transform: translateX(-200%);
+	-o-transform: translateX(-200%);
+	transform: translateX(-200%);
+
+    }
+}
+
+@-webkit-keyframes slideInRight {
+    from {
+	-webkit-transform: translateX(200%);
+	-moz-transform: translateX(200%);
+	-ms-transform: translateX(200%);
+	-o-transform: translateX(200%);
+	transform: translateX(200%);
+
+    }
+    to {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+
+    }
+}
+@-o-keyframes slideInRight {
+    from {
+	-webkit-transform: translateX(200%);
+	-moz-transform: translateX(200%);
+	-ms-transform: translateX(200%);
+	-o-transform: translateX(200%);
+	transform: translateX(200%);
+
+    }
+    to {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+
+    }
+}
+@-moz-keyframes slideInRight {
+    from {
+	-webkit-transform: translateX(200%);
+	-moz-transform: translateX(200%);
+	-ms-transform: translateX(200%);
+	-o-transform: translateX(200%);
+	transform: translateX(200%);
+
+    }
+    to {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+
+    }
+}
+@keyframes slideInRight {
+    from {
+	-webkit-transform: translateX(200%);
+	-moz-transform: translateX(200%);
+	-ms-transform: translateX(200%);
+	-o-transform: translateX(200%);
+	transform: translateX(200%);
+
+    }
+    to {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+
+    }
+}

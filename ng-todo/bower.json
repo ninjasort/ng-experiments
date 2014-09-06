@@ -1,0 +1,16 @@
+{
+  "name": "angular-todo",
+  "version": "0.0.0",
+  "authors": [
+    "Cameron J Roe <cameronjroe@gmail.com>"
+  ],
+  "description": "A simple angular todo app.",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.2.16",
+    "angular-ui-router": "~0.2.10",
+    "bootstrap": "~3.1.1"
+  }
+}

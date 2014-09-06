@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" ng-show="alert.todo">
+            <div class="alert" ng-class="{'alert-success': alert.type === 'create', 'alert-danger': alert.type === 'delete', 'alert-info': alert.type === 'edit'}">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>{{alert.message}}</strong>
+            </div>
+        </div>
+        <div class="todo-input col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h3>Angular Todo</h3>
+                </div>
+                <div class="panel-body">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" ng-model="todo.name">
+                    <br>
+                    <label for="description">Description</label>
+                    <textarea class="form-control" cols="20" rows="5" ng-model="todo.description"></textarea>
+                    <br>
+                    <label for="due-date">Due Date</label>
+					<input type="date"  class="form-control" ng-model="todo.date">
+					<br>
+					<button type="button" ng-hide="todo.editing" ng-click="createTodo(todo)" class="btn form-control btn-primary">Create</button>
+                    <button type="button" ng-show="todo.editing" ng-click="save(todo)" class="btn form-control btn-default">Save</button>
+                </div>
+            </div>
+        </div><!-- Todo Input -->
+	
+        <div class="todo-list col-md-6">
+	        <p ng-hide="todos.length">Add a todo!</p>
+        	<div class="panel panel-default" ng-repeat="todo in todos">
+        		<div class="panel-body">
+			        <h4>{{todo.name}}</h4>
+			        <hr>
+			        <p>{{todo.description}}</p>
+			        <div class="checkbox">
+			            <label>
+			                <input type="checkbox" ng-model="todo.finished">Finished
+			            </label>
+			        </div>
+                    <div class="options pull-right">
+                        <p>Todo: {{todo.id}}</p>
+                        <button type="button" class="btn btn-sm btn-default" ng-click="edit(todo.id)">Edit</button>
+                        <button type="button" class="btn btn-sm btn-default" ng-click="delete(todo.id)">Delete</button>
+                    </div>
+        		</div>
+        	</div>
+        </div>
+
+    </div>
+</div>

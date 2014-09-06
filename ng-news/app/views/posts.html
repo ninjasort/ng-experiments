@@ -1,0 +1,23 @@
+<div class="container posts-page">
+	<div class="post row" ng-repeat="(id, post) in posts">
+		<div class="col-xs-1">
+			<div class="vote up"><span ng-hide="downVoted(post)" ng-click="upVotePost(id, upVoted(post))">&#x25B2;</span></div>
+			<div class="vote down"><span ng-hide="upVoted(post)" ng-click="downVotePost(id, downVoted(post))">&#x25BC;</span></div>
+		</div>
+		<div class="col-xs-11">
+			<div class="info">
+				<a href="#/posts/{{id}}">{{ post.title }}</a>
+				<span class="url">({{ post.url | hostnameFromUrl }})</span>
+			</div>
+			<div>
+				<span>Submitted by <a href="#/users/{{ post.owner }}">{{ post.owner | capitalize }}</a></span><br>
+				<a href="#/posts/{{ id }}">comments</a>
+				<a ng-click="deletePost(id)" ng-show="signedIn() && post.owner === currentUser.username">delete</a>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<span>{{ post.score || 0 }} votes</span><br>
+			<span>submitted by <a href="#/users/{{ post.owner }}">{{ post.owner }}</a></span>
+		</div>
+	</div>
+</div>

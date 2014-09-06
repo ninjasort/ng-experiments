@@ -1,0 +1,7 @@
+body {
+	padding: 50px 0;
+}
+
+.todo-list {
+	overflow: scroll;
+}
